@@ -1,0 +1,439 @@
+/* =========================
+   GENERAL
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+}
+
+.contenido {
+    padding-bottom: 80px;
+}
+
+/* =========================
+   INFO BOX
+========================= */
+
+.info-box {
+    background: #eaf4fb;
+    padding: 15px;
+    border-left: 5px solid #1e90ff;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   TABLAS GENERALES
+========================= */
+
+.tabla-presupuesto {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.tabla-presupuesto th {
+    background: #1e90ff;
+    color: white;
+    padding: 10px;
+}
+
+.tabla-presupuesto td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.tabla-presupuesto input {
+    width: 100%;
+    padding: 6px;
+}
+
+/* =========================
+   TABLA CITAS
+========================= */
+
+.tabla-citas {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 15px;
+}
+
+.tabla-citas th {
+    background: #0a3d62;
+    color: white;
+    padding: 12px;
+}
+
+.tabla-citas td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla-citas tr:hover {
+    background: #f1f8ff;
+}
+
+/* BOTÓN ATENDER */
+.btn-atender {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-atender:hover {
+    background: linear-gradient(135deg, #218838, #1c7430);
+}
+
+/* =========================
+   RECIBOS
+========================= */
+
+.recibo-box {
+    background: #ffffff;
+    padding: 25px;
+    max-width: 650px;
+    margin: auto;
+    border: 1px solid #cfe2f3;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.recibo-header {
+    background: #1e90ff;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recibo-box label {
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+}
+
+.recibo-box input,
+.recibo-box select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.acciones {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.acciones button {
+    padding: 10px 20px;
+    background: #1e90ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.acciones button:hover {
+    background: #0b5ed7;
+}
+
+/* =========================
+   PANEL PRINCIPAL
+========================= */
+
+.panel-clinica {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.titulo-panel {
+    color: #0a3d62;
+    font-size: 32px;
+}
+
+.subtitulo-panel {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.botones-clinica {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.btn-clinica {
+    background: linear-gradient(135deg, #1e90ff, #0a3d62);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: 0.2s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.btn-clinica:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: linear-gradient(135deg, #1e90ff, #0a3d62);
+    color: white;
+    padding: 30px 20px 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+
+/* LOGO NORMAL */
+.logo-dashboard {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.logo-dashboard img {
+    max-width: 620px;
+    height: auto;
+    background: transparent; /* 🔥 clave */
+}
+
+
+.logo-nube img {
+    max-width: 500px;
+}
+
+
+.logo-dashboard img {
+    max-width: px;
+    height: auto;
+    background: transparent; /* 🔥 clave */
+}
+
+
+/* TÍTULO */
+.header h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.menu {
+
+    background: linear-gradient(135deg, #1e90ff, #0a3d62);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px 20px;
+}
+
+
+.menu a {
+    background: rgba(255,255,255,0.15);
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    background: white;
+    color: #0a3d62;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        height: 80px;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================
+   SOLO PARA IMPRESIÓN
+========================= */
+@media print {
+
+    .menu,
+    .acciones,
+    footer,
+    button {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .contenido {
+        padding: 0;
+    }
+
+    .info-box,
+    .tabla-presupuesto,
+    .recibo-box {
+        box-shadow: none;
+        border: none;
+    }
+
+    /* 🔥 ÚNICO CAMBIO: LOGO MÁS GRANDE AL IMPRIMIR */
+    .header .logo {
+        height: 320px !important;
+        margin: 0 auto 15px auto;
+        display: block;
+    }
+}
+
+/* =========================
+   BOTÓN ELIMINAR
+========================= */
+
+.btn-eliminar {
+    background: #c0392b;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.btn-eliminar:hover {
+    background: #a93226;
+}
+
+.titulo-clinica {
+    color: #faaf4e; /* naranja */
+    font-weight: bold;
+}
+
+/* Para impresión */
+@media print {
+    .titulo-clinica {
+        color: #f7d4b1 !important;
+    }
+}
+
+
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* BOTONES CENTRADOS */
+.menu-centro {
+    display: flex;
+    gap: 10px;
+}
+
+/* CERRAR SESIÓN A LA DERECHA */
+.menu-derecha {
+    position: absolute;
+    right: 20px;
+}
+
+.btn-logout {
+    background-color: #0b3c66;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #092c4d;
+}
+
+/* ===== MEJORA FORMULARIOS (VERSIÓN SUAVE) ===== */
+
+form {
+    margin-bottom: 30px;
+}
+
+form input,
+form select {
+    padding: 7px 9px;
+    border: 1px solid #cfd8dc;   /* más fino y gris claro */
+    border-radius: 5px;
+    outline: none;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    transition: 0.2s;
+    background-color: #ffffff;
+}
+
+/* efecto cuando el usuario hace click */
+form input:focus,
+form select:focus {
+    border-color: #90caf9;   /* azul claro suave */
+    box-shadow: 0 0 4px rgba(144, 202, 249, 0.4);
+}
+
+/* botón */
+form button,
+form input[type="submit"] {
+    padding: 8px 14px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    
+}
+
+.btn-volver{
+    background:#6c757d;
+    margin-left:10px;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+    background-color: #0a3d62;
+}
