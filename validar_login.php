@@ -1,11 +1,9 @@
 <?php
 session_start();
+include_once "csrf.php";
 include "conexion.php";
 
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: login.php");
-    exit;
-}
+csrf_require_valid_post();
 
 $usuario  = trim($_POST['usuario']);
 $password = trim($_POST['password']);

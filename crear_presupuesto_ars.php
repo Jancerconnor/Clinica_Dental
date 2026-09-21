@@ -90,6 +90,8 @@ button{
 
     <form action="guardar_presupuesto_ars.php" method="POST">
 
+        <?= csrf_field(); ?>
+
         <input type="hidden" name="id_paciente" value="<?= $id_paciente ?>">
         <input type="hidden" name="id_cita" value="<?= $id_cita ?>">
 

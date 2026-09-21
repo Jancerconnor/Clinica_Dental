@@ -57,13 +57,11 @@ if ($result->num_rows > 0) {
                     👁 Ver
                 </a>
 
-                <a 
-                    href="eliminar_factura.php?id_factura=<?= $row['id_factura']; ?>"
-                    onclick="return confirm('¿Seguro que deseas eliminar esta factura del historial?');"
-                    class="btn-eliminar"
-                >
-                    🗑 Eliminar
-                </a>
+                <form action="eliminar_factura.php" method="POST" style="display:inline;" onsubmit="return confirm('¿Seguro que deseas eliminar esta factura del historial?');">
+                    <?= csrf_field(); ?>
+                    <input type="hidden" name="id_factura" value="<?= $row['id_factura']; ?>">
+                    <button type="submit" class="btn-eliminar">🗑 Eliminar</button>
+                </form>
             </td>
         </tr>
         <?php

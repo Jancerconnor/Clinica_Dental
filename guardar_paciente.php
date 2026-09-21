@@ -1,5 +1,7 @@
 <?php
 include "conexion.php";
+include_once "csrf.php";
+csrf_require_valid_post();
 
 $id_paciente = $_POST['id_paciente'] ?? '';
 

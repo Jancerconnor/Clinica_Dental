@@ -71,10 +71,11 @@ $diferencia_pagar = $total_servicio - $cobertura_ars;
 </table>
 
 <div class="acciones">
-    <a href="generar_factura.php?id_presupuesto=<?= $id_presupuesto; ?>"
-       onclick="return confirm('¿Deseas generar la factura de este presupuesto?');">
-        <button>🧾 Generar Factura</button>
-    </a>
+    <form action="generar_factura.php" method="POST" style="display:inline;" onsubmit="return confirm('¿Deseas generar la factura de este presupuesto?');">
+        <?= csrf_field(); ?>
+        <input type="hidden" name="id_presupuesto" value="<?= $id_presupuesto; ?>">
+        <button type="submit">🧾 Generar Factura</button>
+    </form>
 
     <a href="historial_facturas.php">
         <button>📜 Historial de Facturas</button>

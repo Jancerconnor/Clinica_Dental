@@ -18,6 +18,8 @@ $pacientes = $conn->query("
 
 <form action="guardar_paciente.php" method="POST" class="formulario" id="formPaciente">
 
+    <?= csrf_field(); ?>
+
     <input type="hidden" name="id_paciente" id="id_paciente">
 
     <label>Cédula</label>
@@ -55,6 +57,11 @@ $pacientes = $conn->query("
 
     <button type="submit">Guardar / Agendar Cita</button>
 
+</form>
+
+<form action="eliminar_paciente.php" method="POST" id="formEliminarPaciente" style="display:none;">
+    <?= csrf_field(); ?>
+    <input type="hidden" name="id" id="idEliminarPaciente">
 </form>
 
 <hr>
@@ -136,7 +143,8 @@ function eliminarPaciente(id) {
     if (!confirm("⚠️ ¿Seguro que deseas eliminar este paciente?\n\nSe eliminará todo el historial e información.")) {
         return;
     }
-    window.location.href = "eliminar_paciente.php?id=" + id;
+    document.getElementById("idEliminarPaciente").value = id;
+    document.getElementById("formEliminarPaciente").submit();
 }
 </script>
 

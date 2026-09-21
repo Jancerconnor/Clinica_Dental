@@ -1,9 +1,8 @@
 <?php
 include "conexion.php";
+include_once "csrf.php";
 
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    die("Acceso no permitido");
-}
+csrf_require_valid_post();
 
 $codigo_recibo  = $_POST['codigo_recibo'];
 $nombre_cliente = $_POST['nombre_cliente'];

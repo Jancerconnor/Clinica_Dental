@@ -65,12 +65,11 @@ $recibos = $conn->query("
                         <button>🖨 Ver / Imprimir</button>
                     </a>
 
-                    <a 
-                        href="eliminar_recibo.php?id_recibo=<?= $r['id_recibo']; ?>"
-                        onclick="return confirm('¿Seguro que deseas eliminar este recibo?');"
-                    >
-                        <button class="btn-eliminar">🗑 Eliminar</button>
-                    </a>
+                    <form action="eliminar_recibo.php" method="POST" style="display:inline;" onsubmit="return confirm('¿Seguro que deseas eliminar este recibo?');">
+                        <?= csrf_field(); ?>
+                        <input type="hidden" name="id_recibo" value="<?= $r['id_recibo']; ?>">
+                        <button type="submit" class="btn-eliminar">🗑 Eliminar</button>
+                    </form>
                 </td>
             </tr>
         <?php endwhile; ?>
