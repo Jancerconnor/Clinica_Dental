@@ -18,6 +18,8 @@ $fecha  = date("Y-m-d");
 
     <form action="guardar_recibo.php" method="POST">
 
+        <?= csrf_field(); ?>
+
         <p><strong>No:</strong> <?= $codigo ?></p>
         <p><strong>Fecha:</strong> <?= date("d/m/Y") ?></p>
 

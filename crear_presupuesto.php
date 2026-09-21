@@ -50,6 +50,8 @@ $fecha = date("d/m/Y");
 
 <form action="guardar_presupuesto.php" method="POST" id="formPresupuesto">
 
+<?= csrf_field(); ?>
+
 <input type="hidden" name="id_paciente" value="<?= $id_paciente; ?>">
 <input type="hidden" name="id_cita" value="<?= $id_cita; ?>">
 

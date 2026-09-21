@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once "csrf.php";
 
 /* Si ya hay sesión, mandar al dashboard */
 if (isset($_SESSION['id_usuario'])) {
@@ -78,6 +79,7 @@ button:hover{
     <?php endif; ?>
 
     <form action="validar_login.php" method="POST">
+        <?= csrf_field(); ?>
         <input type="text" name="usuario" placeholder="Usuario" required>
         <input type="password" name="password" placeholder="Contraseña" required>
         <button type="submit">Entrar</button>

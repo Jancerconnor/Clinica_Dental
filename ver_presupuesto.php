@@ -43,9 +43,11 @@ if (!$pres) {
 <div class="acciones" style="margin-top:15px;">
     <button onclick="window.print()">🖨 Imprimir</button>
 
-    <a href="generar_factura.php?id_presupuesto=<?= $id_presupuesto; ?>">
-        <button type="button">🧾 Generar Factura</button>
-    </a>
+    <form action="generar_factura.php" method="POST" style="display:inline;">
+        <?= csrf_field(); ?>
+        <input type="hidden" name="id_presupuesto" value="<?= $id_presupuesto; ?>">
+        <button type="submit">🧾 Generar Factura</button>
+    </form>
 </div>
 
 <?php include "footer.php"; ?>

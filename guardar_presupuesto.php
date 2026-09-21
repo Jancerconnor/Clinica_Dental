@@ -1,5 +1,7 @@
 <?php
 include "conexion.php";
+include_once "csrf.php";
+csrf_require_valid_post();
 include "header.php";
 
 $id_paciente = intval($_POST['id_paciente']);

@@ -1,5 +1,6 @@
 <?php
 include "conexion.php";
+include_once "csrf.php";
 
 $busqueda = "";
 $where = "";
@@ -123,11 +124,11 @@ input{
                    Ver
                 </a>
 
-                <a class="btn eliminar"
-                   href="eliminar_factura_ars.php?id_factura=<?= $f['id_factura']; ?>"
-                   onclick="return confirm('¿Seguro que deseas eliminar esta factura?');">
-                   Eliminar
-                </a>
+                <form action="eliminar_factura_ars.php" method="POST" style="display:inline;" onsubmit="return confirm('¿Seguro que deseas eliminar esta factura?');">
+                    <?= csrf_field(); ?>
+                    <input type="hidden" name="id_factura" value="<?= $f['id_factura']; ?>">
+                    <button type="submit" class="btn eliminar">Eliminar</button>
+                </form>
             </td>
         </tr>
         <?php } ?>

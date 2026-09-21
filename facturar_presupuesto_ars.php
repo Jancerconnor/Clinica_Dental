@@ -1,11 +1,13 @@
 <?php
 include "conexion.php";
+include_once "csrf.php";
+csrf_require_valid_post();
 
-if (!isset($_GET['id_presupuesto'])) {
+if (!isset($_POST['id_presupuesto'])) {
     die("Presupuesto no válido");
 }
 
-$id_presupuesto = intval($_GET['id_presupuesto']);
+$id_presupuesto = intval($_POST['id_presupuesto']);
 $fecha = date("Y-m-d");
 
 /* ============================

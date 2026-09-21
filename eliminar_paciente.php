@@ -1,11 +1,13 @@
 <?php
 include "conexion.php";
+include_once "csrf.php";
+csrf_require_valid_post();
 
-if (!isset($_GET['id'])) {
+if (!isset($_POST['id'])) {
     die("ID no válido");
 }
 
-$id = intval($_GET['id']);
+$id = intval($_POST['id']);
 
 $conn->begin_transaction();
 

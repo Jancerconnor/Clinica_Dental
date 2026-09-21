@@ -1,3 +1,4 @@
+<?php include_once "csrf.php"; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -26,9 +27,10 @@
     </div>
 
     <div class="menu-derecha">
-        <a href="logout.php" class="btn-logout">
-            🔒 Cerrar sesión
-        </a>
+        <form action="logout.php" method="POST" style="display:inline;">
+            <?= csrf_field(); ?>
+            <button type="submit" class="btn-logout">🔒 Cerrar sesión</button>
+        </form>
     </div>
 
 </nav>

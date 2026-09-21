@@ -1,5 +1,6 @@
 <?php
 include "conexion.php";
+include_once "csrf.php";
 
 if (!isset($_GET['id_presupuesto'])) {
     die("Presupuesto no válido");
@@ -167,11 +168,11 @@ td{
 
     <div class="acciones">
         <?php if ($presupuesto['estado'] == 'pendiente') { ?>
-            <a class="btn"
-               href="facturar_presupuesto_ars.php?id_presupuesto=<?= $id_presupuesto ?>"
-               onclick="return confirm('¿Deseas facturar este presupuesto?')">
-               FACTURAR PRESUPUESTO
-            </a>
+            <form action="facturar_presupuesto_ars.php" method="POST" style="display:inline;" onsubmit="return confirm('¿Deseas facturar este presupuesto?');">
+                <?= csrf_field(); ?>
+                <input type="hidden" name="id_presupuesto" value="<?= $id_presupuesto ?>">
+                <button type="submit" class="btn">FACTURAR PRESUPUESTO</button>
+            </form>
         <?php } else { ?>
             <span class="btn-disabled">YA FACTURADO</span>
         <?php } ?>
